@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 import time
 
 driver = webdriver.Chrome()
-driver.get("https://www.google.com")
+driver.get("https://www.flipkart.com")
 
 print("Title:", driver.title)
 
 search_box = driver.find_element(By.NAME, "q")
-search_box.send_keys("Selenium Python automation")
+search_box.send_keys("iphone")
 search_box.submit()
 
 time.sleep(3)
