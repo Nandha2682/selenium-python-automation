@@ -13,6 +13,12 @@ badge_text = driver.find_element(By.CLASS_NAME, "shopping_cart_badge").text
 print("Cart count:", badge_text)
 driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
 print("Current URL:", driver.current_url)
+driver.find_element(By.ID, "checkout").click()
+driver.find_element(By.ID, "first-name").send_keys("nandha")
+driver.find_element(By.ID, "last-name").send_keys("kumar")
+driver.find_element(By.ID, "postal-code").send_keys("64166")
+driver.find_element(By.ID, "continue").click()
+print("Current URL after continue:", driver.current_url)
 
 input("Press Enter to close browser...")
 driver.quit()
