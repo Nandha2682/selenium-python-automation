@@ -15,5 +15,13 @@ alert = driver.switch_to.alert
 print(alert.text)
 alert.accept()
 
+driver.find_element(By.ID,"prompt").click()
+alert=driver.switch_to.alert
+alert.send_keys("Test")
+alert.accept()
+print("Prompt handled successfully")
+
+
+
 input("Press Enter to close browser...")
 driver.quit()
