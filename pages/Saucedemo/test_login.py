@@ -1,11 +1,21 @@
 from login_page import LoginPage
 from selenium.webdriver.common.by import By
 import pytest
-@pytest.mark.parametrize("username,password", [
-    ("standard_user", "secret_sauce"),
-    ("locked_out_user", "secret_sauce"),
-])
+import csv
+import os
+
+def load_login_data():
+    data = []
+    csv_path = os.path.join(os.path.dirname(__file__), "login_data.csv")
+    with open(csv_path, newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+           data.append((row["username"].strip(), row["password"].strip()))
+    return data
+
+@pytest.mark.parametrize("username,password", load_login_data())
 def test_login(driver, username, password):
+
     driver.get("https://www.saucedemo.com/")
     LoginPage(driver).login(username, password)
 
