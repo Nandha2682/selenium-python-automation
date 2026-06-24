@@ -1,0 +1,14 @@
+2026-06-24 11:25:02,123 - INFO - Starting valid login test
+2026-06-24 11:25:02,860 - INFO - Valid login test passed
+2026-06-24 11:25:06,038 - INFO - Starting invalid login test - wrong password
+2026-06-24 11:25:06,756 - INFO - Invalid login test passed
+2026-06-24 11:25:09,833 - INFO - Starting locked out user test
+2026-06-24 11:25:10,431 - INFO - Locked out user test passed
+2026-06-24 11:25:13,549 - INFO - Starting full checkout flow test
+2026-06-24 11:25:28,419 - INFO - Starting checkout missing postal code test
+2026-06-24 11:27:35,838 - INFO - Starting full checkout flow test
+2026-06-24 11:27:37,182 - INFO - Order total: Total: $32.39
+2026-06-24 11:27:37,254 - INFO - Full checkout flow test passed
+2026-06-24 11:27:40,569 - INFO - Starting checkout missing postal code test
+2026-06-24 11:28:45,918 - INFO - Starting full checkout flow test
+2026-06-24 11:29:05,699 - INFO - Starting checkout missing postal code test
