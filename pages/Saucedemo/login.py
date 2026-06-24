@@ -6,10 +6,14 @@ from checkout_info_page import CheckoutInfoPage
 from overview_page import OverviewPage
 from complete_page import CompletePage
 
-driver = webdriver.Chrome()
-driver.get("https://www.saucedemo.com/")
 
-LoginPage(driver).login("standard_user", "secret_sauce")
+driver = webdriver.Chrome()
+
+from utils.config_reader import get_config
+
+driver.get(get_config("base_url"))
+login(get_config("username"), get_config("password"))
+
 
 inventory = InventoryPage(driver)
 inventory.add_to_cart()

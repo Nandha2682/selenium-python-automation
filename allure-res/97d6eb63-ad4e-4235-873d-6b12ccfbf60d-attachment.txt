@@ -1,0 +1,3 @@
+Cart count: 1
+Confirmation: Thank you for your order!
+TEST PASSED ✅

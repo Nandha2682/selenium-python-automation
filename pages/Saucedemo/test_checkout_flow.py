@@ -4,10 +4,14 @@ from cart_page import CartPage
 from checkout_info_page import CheckoutInfoPage
 from overview_page import OverviewPage
 from complete_page import CompletePage
+from utils.config_reader import get_config
 def test_checkout_flow(driver):
     driver.get("https://www.saucedemo.com/")
         
-    LoginPage(driver).login("standard_user", "secret_sauce")
+    
+    login_page = LoginPage(driver)
+    login_page.login(get_config("username"), get_config("password"))
+
 
     inventory = InventoryPage(driver)
     inventory.add_to_cart()
