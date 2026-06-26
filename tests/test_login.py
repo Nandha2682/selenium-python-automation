@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from utils.logger import get_logger
@@ -36,3 +37,15 @@ def test_locked_out_user(driver):
     error_text = login_page.get_error_text()
     assert "locked out" in error_text.lower()
     logger.info("Locked out user test passed")
+=======
+from selenium import webdriver
+from pages.login_page import LoginPage
+def test_valid_login():
+    driver =webdriver.Chrome()
+    driver.get("https://www.saucedemo.com")
+    login_page=LoginPage(driver)
+    login_page.login("standard_user","secret_sauce")
+    assert "inventory" in driver.current_url
+    driver.quit()
+
+>>>>>>> f5ce0a623343f739f440c1840d2901c0499b7050
